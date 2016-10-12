@@ -1,0 +1,14 @@
+﻿@{
+    Layout = null;
+}
+
+<form ng-submit="login()">
+    <input type="text" ng-model="loginForm.emailAddress" id="emailAddress" required />
+    <input type="password" id="password" ng-model="loginForm.password" required />
+    <input type="checkbox" id="rememberMe" ng-model="loginForm.rememberMe" required />
+    <input type="submit" value="Submit" />
+</form>
+
+<div ng-if="loginForm.loginFailure">
+    D'oh!
+</div>
